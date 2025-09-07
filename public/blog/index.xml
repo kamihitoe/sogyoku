@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site – Blogs</title>
-    <link>http://localhost:1313/blog/</link>
-    <description>Recent content in Blogs on My New Hugo Site</description>
+    <title>ソギョク 的网站 – Blogs</title>
+    <link>https://sogyoku.netlify.app/blog/</link>
+    <description>Recent content in Blogs on ソギョク 的网站</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Sat, 06 Sep 2025 19:07:22 +0800</lastBuildDate>
     
-	  <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://sogyoku.netlify.app/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -17,14 +17,14 @@
     
     <item>
       <title>Post 1</title>
-      <link>http://localhost:1313/blog/post-1/</link>
+      <link>https://sogyoku.netlify.app/blog/post-1/</link>
       <pubDate>Sat, 06 Sep 2025 19:07:22 +0800</pubDate>
       
-      <guid>http://localhost:1313/blog/post-1/</guid>
+      <guid>https://sogyoku.netlify.app/blog/post-1/</guid>
       <description>
         
         
-        &lt;p&gt;my first post&lt;/p&gt;
+        &lt;p&gt;My first post.&lt;/p&gt;
 
       </description>
     </item>
