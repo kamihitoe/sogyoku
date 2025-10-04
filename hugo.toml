@@ -1,4 +1,0 @@
-baseURL = 'https://sogyoku.netlify.app/'
-languageCode = 'zh-CN'
-title = 'ソギョク 的网站'
-theme = 'hextra'
