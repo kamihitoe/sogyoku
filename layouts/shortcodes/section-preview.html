@@ -1,0 +1,48 @@
+{{/* 获取传入的 section 参数，例如 "notes" */}}
+{{ $section := .Get "section" }}
+{{ $title := .Get "title" }}
+
+{{/* 获取该 section 下的所有常规页面，按时间倒序 */}}
+{{ $pages := where site.RegularPages "Section" $section }}
+
+{{/* 只有当该板块有文章时才显示 */}}
+{{ if gt (len $pages) 0 }}
+<div class="mb-12">
+  <!-- 板块标题 -->
+  <h2 class="text-2xl font-bold mb-4 flex items-center gap-2 border-b pb-2">
+    <!-- 这里是一个简单的图标装饰，你可以去掉 -->
+    <span class="text-primary-600">#</span> 
+    <a href="/{{ $section }}/" class="hover:underline">{{ $title }}</a>
+    <span class="text-sm font-normal text-gray-400 ml-auto">
+      <a href="/{{ $section }}/">查看全部 →</a>
+    </span>
+  </h2>
+
+  <!-- 文章网格 -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    {{/* 取前 3 篇文章 */}}
+    {{ range first 3 $pages }}
+      <a href="{{ .RelPermalink }}" class="group block p-5 rounded-xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:shadow-lg hover:border-primary-500 transition-all duration-300">
+        <!-- 文章标题 -->
+        <h3 class="text-lg font-semibold mb-2 group-hover:text-primary-600 line-clamp-1">
+          {{ .Title }}
+        </h3>
+        
+        <!-- 文章发布日期 -->
+        <div class="text-xs text-gray-400 mb-3">
+          {{ .Date.Format "2006-01-02" }}
+        </div>
+
+        <!-- 预览内容 (摘要)，限制显示3行 -->
+        <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-3 leading-relaxed">
+          {{ if .Description }}
+            {{ .Description }}
+          {{ else }}
+            {{ .Summary | plainify | htmlUnescape }}
+          {{ end }}
+        </p>
+      </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

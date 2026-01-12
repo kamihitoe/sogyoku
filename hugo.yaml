@@ -1,17 +1,24 @@
 baseURL: 'https://sogyoku.netlify.app/'
 languageCode: 'zh-CN'
-title: 'ソギョク 的网站'
+title: 'ソギョク 的博客'
 theme: 'hextra'
 params:
   navbar:
     displayTitle: true
-    displayLogo: true
+    displayLogo: false # 不显示logo
     logo:
       path: images/logo.svg
-      dark: images/logo-dark.svg
+      # dark: images/logo-dark.svg
       link: /
+  footer:
+    # display: true
+    # content: ""
   theme:
     default: system
     displayToggle: true
   displayUpdatedDate: true
   dateFormat: "2006年1月2日"
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
