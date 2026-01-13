@@ -1,4 +1,3 @@
-
 .my-home-container {
   display: flex;
   flex-direction: column;
@@ -76,5 +75,147 @@ html.dark .my-logo-card {
 }
 
 html.dark .my-hero-desc {
+  color: #9ca3af;
+}
+
+
+/* =========================================
+   板块预览组件样式 (Section Preview)
+   ========================================= */
+
+/* 1. 外层容器 */
+.sp-wrapper {
+  margin-bottom: 3rem; /* 板块之间的间距 */
+}
+
+/* 2. 标题栏 */
+.sp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e7eb; /* 浅灰底线 */
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* 暗色模式下标题栏底线颜色 */
+html.dark .sp-header {
+  border-bottom-color: #262626;
+}
+
+.sp-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0; /* 去掉默认 margin */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sp-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sp-icon {
+  color: #3b82f6; /* 装饰符号颜色 */
+}
+
+.sp-more-link {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.sp-more-link:hover {
+  color: #3b82f6; /* 悬停变蓝 */
+}
+
+/* 3. 网格布局 (核心) */
+.sp-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 手机端默认 1 列 */
+  gap: 1.5rem; /* 卡片间距 */
+}
+
+/* 平板和电脑端显示 3 列 */
+@media (min-width: 768px) {
+  .sp-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 4. 卡片样式 */
+.sp-card {
+  display: block;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem; /* 12px 圆角 */
+  padding: 1.25rem;
+  text-decoration: none; /* 去掉链接下划线 */
+  transition: all 0.3s ease; /* 平滑过渡动画 */
+  height: 100%; /* 保证同一行卡片高度一致 */
+  box-sizing: border-box;
+}
+
+/* 卡片悬停效果：上浮 + 阴影 + 边框变色 */
+.sp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-color: #3b82f6;
+}
+
+/* 暗色模式卡片适配 */
+html.dark .sp-card {
+  background-color: #171717; /* 深色背景 */
+  border-color: #262626;
+}
+html.dark .sp-card:hover {
+  border-color: #60a5fa; /* 暗色模式下的悬停边框色 */
+}
+
+/* 5. 卡片内部元素 */
+.sp-card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #111827;
+  
+  /* 标题只显示一行，超出的省略 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+html.dark .sp-card-title {
+  color: #f3f4f6;
+}
+
+.sp-card:hover .sp-card-title {
+  color: #2563eb; /* 悬停时标题变色 */
+}
+
+.sp-card-date {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-bottom: 0.75rem;
+}
+
+.sp-card-summary {
+  font-size: 0.875rem;
+  color: #4b5563;
+  line-height: 1.6;
+  
+  /* 限制显示 3 行，超出显示省略号 (Webkit 方案) */
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+html.dark .sp-card-summary {
   color: #9ca3af;
 }

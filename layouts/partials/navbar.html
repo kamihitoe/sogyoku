@@ -1,0 +1,72 @@
+
+<div class="hextra-nav-container hx:sticky hx:top-0 hx:z-20 hx:w-full hx:bg-transparent hx:print:hidden">
+    <div class="hextra-nav-container-blur hx:pointer-events-none hx:absolute hx:z-[-1] hx:h-full hx:w-full hx:bg-white hx:dark:bg-dark hx:shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] hx:contrast-more:shadow-[0_0_0_1px_#000] hx:dark:shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] hx:contrast-more:dark:shadow-[0_0_0_1px_#fff]"></div>
+    <nav class="hextra-max-navbar-width hx:mx-auto hx:flex hx:items-center hx:justify-end hx:gap-2 hx:h-16 hx:px-6">
+    
+    <!-- 1. 左侧 Logo -->
+    <div class="hx:flex hx:items-center">
+        <a class="hx:flex hx:items-center hx:hover:opacity-75 hx:ltr:mr-auto hx:rtl:ml-auto" href="{{ .Site.Home.RelPermalink }}">
+        {{- if .Site.Params.navbar.logo.path -}}
+            <img src="{{ .Site.Params.navbar.logo.path | relURL }}" alt="{{ .Site.Title }}" class="hx:mr-2 hx:block" style="height: 20px;">
+        {{- end -}}
+        {{- if .Site.Params.navbar.displayTitle | default true -}}
+            <span class="hx:mr-2 hx:font-extrabold hx:inline hx:select-none" title="{{ .Site.Title }}">
+            {{- .Site.Params.navbar.logo.text | default .Site.Title -}}
+            </span>
+        {{- end -}}
+        </a>
+    </div>
+
+    <div class="hx:grow"></div>
+
+    <!-- 2. 中间 菜单链接 (修复了这里的语法错误) -->
+    <div class="md:hx:flex hx:items-center hx:gap-4 hx:text-sm hx:font-medium hx:text-gray-600 hx:dark:text-gray-400">
+        {{- range .Site.Menus.main -}}
+        {{- $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) -}}
+        {{- $activeClass := cond $active "hx:text-primary-600 hx:font-bold" "hx:hover:text-gray-900 hx:dark:hx:hover:text-gray-200" -}}
+        
+        <a href="{{ .URL }}" class="{{ $activeClass }} hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200">
+            <span class="hx:text-center">{{ .Name }}</span>
+        </a>
+        {{- end -}}
+    </div>
+
+    <div class="hx:hidden md:hx:block hx:w-px hx:h-5 hx:bg-gray-200 hx:dark:bg-neutral-800 hx:mx-2"></div>
+
+    <!-- 3. 右侧功能区 -->
+    <div class="hx:flex hx:items-center hx:gap-2">
+        
+        <!-- 搜索 -->
+        {{- if .Site.Params.search.enable | default true -}}
+        {{ partial "search.html" . }}
+        {{- end -}}
+
+        <!-- 主题切换 -->
+        <!-- <div class="hx:relative hx:flex hx:items-center hx:group">
+        <button title="切换主题" class="hextra-theme-toggle hx:cursor-pointer hx:rounded-md hx:p-2 hx:text-gray-600 hx:hover:bg-gray-100 hx:dark:text-gray-400 hx:dark:hover:bg-primary-100/5 hx:transition-colors">
+            <svg height="20" class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            <svg height="20" class="hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+            <svg height="20" class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M 11.996094,2 C 6.4986225,2.0192368 2.03125,6.5024993 2.03125,12 c 0,5.497501 4.4673725,9.980763 9.964844,10 H 12 12.0039 c 5.497471,-0.01924 9.964844,-4.502499 9.964844,-10 0,-5.4975007 -4.467373,-9.9807632 -9.964844,-10 H 12 Z M 12,4 c 4.417218,0.017598 7.96875,3.5822356 7.96875,8 0,4.417764 -3.551532,7.982402 -7.96875,8 z"></path></svg>
+        </button>
+        <ul class="hextra-theme-toggle-options hx:hidden hx:absolute hx:top-full hx:right-0 hx:mt-2 hx:w-32 hx:z-20 hx:rounded-md hx:bg-white hx:shadow-lg hx:ring-1 hx:ring-black/5 hx:dark:bg-neutral-800 hx:dark:ring-white/20 hx:py-1 hx:text-sm">
+            <li class="hx:cursor-pointer hx:px-4 hx:py-2 hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-700" data-item="light">浅色</li>
+            <li class="hx:cursor-pointer hx:px-4 hx:py-2 hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-700" data-item="dark">深色</li>
+            <li class="hx:cursor-pointer hx:px-4 hx:py-2 hx:hover:bg-gray-100 hx:dark:hover:bg-neutral-700" data-item="system">跟随系统</li>
+        </ul>
+        </div> -->
+
+        <!-- 社交图标 -->
+        {{- range .Site.Params.navbar.icons -}}
+        <a href="{{ .url }}" target="_blank" rel="noreferrer" class="hx:p-2 hx:text-gray-600 hx:hover:bg-gray-100 hx:dark:text-gray-400 hx:dark:hover:bg-primary-100/5 hx:rounded-md hx:transition-colors">
+            {{- partial "utils/icon.html" (dict "name" .icon "attributes" "height=20") -}}
+            <span class="hx:sr-only">{{ .name }}</span>
+        </a>
+        {{- end -}}
+
+        <!-- 移动端菜单按钮 -->
+        <button type="button" aria-label="Menu" class="hextra-hamburger-menu hx:cursor-pointer hx:-mr-2 hx:rounded-sm hx:p-2 hx:active:bg-gray-400/20 hx:md:hidden">
+        <svg height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8H20"></path></g><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16H20"></path></g></svg>
+        </button>
+    </div>
+    </nav>
+</div>

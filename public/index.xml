@@ -15,6 +15,20 @@
     
     
     <item>
+      <title>唉</title>
+      <link>http://localhost:1313/life/%E5%94%89/</link>
+      <pubDate>Mon, 12 Jan 2026 20:22:29 +0800</pubDate>
+      
+      <guid>http://localhost:1313/life/%E5%94%89/</guid>
+      <description>
+        
+        
+        &lt;p&gt;唉&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Post 1</title>
       <link>http://localhost:1313/blog/post-1/</link>
       <pubDate>Sat, 06 Sep 2025 19:07:22 +0800</pubDate>

@@ -3,8 +3,6 @@ title: 首页
 layout: hextra-home
 ---
 
-<link rel="stylesheet" href="/css/my.css">
-
 <!-- ==================== -->
 <!-- 顶部 -->
 <!-- ==================== -->

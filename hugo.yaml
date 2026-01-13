@@ -17,8 +17,23 @@ params:
     default: system
     displayToggle: true
   displayUpdatedDate: true
-  dateFormat: "2006年1月2日"
+  dateFormat: "2006/1/2"
 markup:
   goldmark:
     renderer:
       unsafe: true
+
+menu:
+  main:
+    - name: 首页
+      url: /
+      weight: 10
+    - name: 博客
+      url: /blog/
+      weight: 20
+    - name: 生活记录
+      url: /life/
+      weight: 40
+    - name: 关于
+      url: /about/
+      weight: 30
