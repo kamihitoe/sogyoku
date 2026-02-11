@@ -5,7 +5,7 @@
     <description>Recent content in 首页 on ソギョク 的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 11 Feb 2026 10:24:34 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 11 Feb 2026 21:07:55 +0800</lastBuildDate>
     
 	  <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,6 +13,20 @@
       
       
     
+    
+    <item>
+      <title>痛みは生き続けることの対価だ</title>
+      <link>http://localhost:1313/misc/%E7%97%9B%E3%81%BF%E3%81%AF%E7%94%9F%E3%81%8D%E7%B6%9A%E3%81%91%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AE%E5%AF%BE%E4%BE%A1%E3%81%A0/</link>
+      <pubDate>Wed, 11 Feb 2026 21:07:55 +0800</pubDate>
+      
+      <guid>http://localhost:1313/misc/%E7%97%9B%E3%81%BF%E3%81%AF%E7%94%9F%E3%81%8D%E7%B6%9A%E3%81%91%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AE%E5%AF%BE%E4%BE%A1%E3%81%A0/</guid>
+      <description>
+        
+        
+        &lt;p&gt;痛みは生きている証だ&lt;/p&gt;
+
+      </description>
+    </item>
     
     <item>
       <title>并查集(DSU)</title>
@@ -73,20 +87,6 @@
         
         
         &lt;p&gt;唉&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Post 1</title>
-      <link>http://localhost:1313/blog/post-1/</link>
-      <pubDate>Sat, 06 Sep 2025 19:07:22 +0800</pubDate>
-      
-      <guid>http://localhost:1313/blog/post-1/</guid>
-      <description>
-        
-        
-        &lt;p&gt;My first post.&lt;/p&gt;
 
       </description>
     </item>

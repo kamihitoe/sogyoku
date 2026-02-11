@@ -28,9 +28,9 @@ layout: hextra-home
 <!-- 各板块内容 -->
 <!-- ==================== -->
 
-{{< section-preview section="sol" title="题解 / Solutions" >}}
+{{< section-preview section="note" title="笔记 / Note" >}}
 
-{{< section-preview section="note" title="笔记 / Notes" >}}
+{{< section-preview section="sol" title="题解 / Solution" >}}
 
 {{< section-preview section="life" title="生活记录 / Life" >}}
 
