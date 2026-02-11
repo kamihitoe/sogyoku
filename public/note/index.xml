@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ソギョク 的博客 – 笔记</title>
+    <link>http://localhost:1313/note/</link>
+    <description>Recent content in 笔记 on ソギョク 的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 11 Feb 2026 10:24:34 +0800</lastBuildDate>
+    
+	  <atom:link href="http://localhost:1313/note/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

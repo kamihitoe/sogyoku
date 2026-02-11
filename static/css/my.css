@@ -219,3 +219,13 @@ html.dark .sp-card-title {
 html.dark .sp-card-summary {
   color: #9ca3af;
 }
+
+
+
+/* 去除下拉导航栏底部的主题切换按钮 */
+.hextra-sidebar-container .hx\:bottom-0:has(.hextra-theme-toggle){
+  display: none;
+}
+.hextra-sidebar-container .hextra-theme-toggle{
+  display: none;
+}

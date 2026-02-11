@@ -22,5 +22,9 @@
     <loc>http://localhost:1313/tags/</loc>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
+  </url><url>
+    <loc>http://localhost:1313/note/</loc>
+  </url><url>
+    <loc>http://localhost:1313/sol/</loc>
   </url>
 </urlset>

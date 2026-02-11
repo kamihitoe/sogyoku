@@ -13,11 +13,17 @@ params:
   footer:
     # display: true
     # content: ""
+
   theme:
     default: system
     displayToggle: true
+
+  page:
+    # full (100%), wide (90rem), normal (1280px)
+    width: normal
+
   displayUpdatedDate: true
-  dateFormat: "2006/1/2"
+  dateFormat: "2006/1/2" # 日期格式
 markup:
   goldmark:
     renderer:
@@ -26,14 +32,32 @@ markup:
 menu:
   main:
     - name: 首页
-      url: /
-      weight: 10
-    - name: 博客
-      url: /blog/
-      weight: 20
+      pageRef: /
+      weight: 1
+    - name: 笔记
+      pageRef: /note
+      weight: 2
+    - name: 题解
+      pageRef: /sol
+      weight: 3
+    - name: 写作
+      pageRef: /writing
+      weight: 4
     - name: 生活记录
-      url: /life/
-      weight: 40
+      pageRef: /life
+      weight: 5
+    - name: 杂项
+      pageRef: /misc
+      weight: 6
     - name: 关于
-      url: /about/
-      weight: 30
+      pageRef: /about
+      weight: 10    
+    - name: 搜索
+      weight: 20
+      params:
+        type: search
+    - name: 切换主题
+      weight: 40
+      params:
+        type: theme-toggle
+        label: true
