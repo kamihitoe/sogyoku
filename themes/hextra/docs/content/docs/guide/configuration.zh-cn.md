@@ -121,6 +121,19 @@ params:
       height: 20
 ```
 
+### 分页导航
+
+禁用文档页面或博客文章底部的上一篇/下一篇导航：
+
+```yaml {filename="hugo.yaml"}
+params:
+  page:
+    displayPagination: false  # 文档页面
+  blog:
+    article:
+      displayPagination: false  # 博客文章
+```
+
 ## 侧边栏
 
 ### 主侧边栏
@@ -272,6 +285,8 @@ params:
 
 要自定义日期格式，设置 `params.dateFormat` 参数。其布局与 Hugo 的 [`time.Format`](https://gohugo.io/functions/time/format/) 匹配。
 
+此外，可以通过启用 `params.displayUpdatedAuthor` 标志来显示最后修改的作者。这需要设置 `enableGitInfo: true`。
+
 ```yaml {filename="hugo.yaml"}
 # 解析 Git 提交
 enableGitInfo: true
@@ -280,6 +295,8 @@ params:
   # 显示最后修改日期
   displayUpdatedDate: true
   dateFormat: "2006年1月2日"
+  # 显示最后修改的作者
+  displayUpdatedAuthor: true
 ```
 
 ### 标签
@@ -295,9 +312,37 @@ params:
     displayTags: true
 ```
 
+### 图片缩放
+
+图片缩放默认禁用。启用后，点击 Markdown 图片会打开放大视图。
+
+```yaml {filename="hugo.yaml"}
+params:
+  imageZoom:
+    enable: true
+```
+
+要在特定页面禁用缩放，在页面的 front matter 中添加：
+
+```yaml {filename="content/docs/guide/configuration.md"}
+---
+imageZoom: false
+---
+```
+
+如果想固定 Medium Zoom 资源或从本地资源加载：
+
+```yaml {filename="hugo.yaml"}
+params:
+  imageZoom:
+    enable: true
+    base: "https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist"
+    # js: "js/medium-zoom.min.js" # 可选，相对于 base 或本地资源
+```
+
 ### 页面宽度
 
-页面宽度可以通过配置文件中的 `params.page.width` 参数自定义：
+页面整体布局宽度可通过 `params.page.width` 配置：
 
 ```yaml {filename="hugo.yaml"}
 params:
@@ -306,9 +351,77 @@ params:
     width: wide
 ```
 
-有三个可用选项：`full`、`wide` 和 `normal`。默认页面宽度为 `normal`。
+`params.page.width` 可用选项：`full`、`wide`、`normal`。
+
+正文内容宽度默认固定为 `72rem`。
+
+如需自定义内容宽度，请在自定义样式表中覆盖 CSS 变量：
+
+```css {filename="assets/css/custom.css"}
+:root {
+  --hextra-max-content-width: 100%;
+}
+```
 
 类似地，导航栏和页脚的宽度可以通过 `params.navbar.width` 和 `params.footer.width` 参数自定义。
+
+### 页面上下文菜单
+
+页面上下文菜单提供一个下拉按钮，允许用户将页面内容复制为 Markdown 或查看原始 Markdown 源码。此功能对于读者可能希望以 Markdown 格式共享或引用内容的文档站点非常有用。
+
+#### 启用上下文菜单
+
+要全局启用上下文菜单，请在配置文件中添加以下内容：
+
+```yaml {filename="hugo.yaml"}
+params:
+  page:
+    contextMenu:
+      enable: true
+```
+
+您还需要为页面启用 `markdown` 输出格式：
+
+```yaml {filename="hugo.yaml"}
+outputs:
+  page: [html, markdown]
+  section: [html, rss, markdown]
+```
+
+#### 单页控制
+
+要为特定页面启用或禁用上下文菜单，请在 front matter 中使用 `contextMenu` 参数：
+
+```yaml {filename="content/docs/example.md"}
+---
+title: 示例页面
+contextMenu: false
+---
+```
+
+#### 自定义链接
+
+您可以向上下文菜单下拉列表添加自定义链接。这对于与外部服务集成非常有用。链接支持以下占位符：
+
+- `{url}` - 页面 URL（URL 编码）
+- `{title}` - 页面标题（URL 编码）
+- `{markdown_url}` - 原始 Markdown 内容的 URL（URL 编码）
+
+```yaml {filename="hugo.yaml"}
+params:
+  page:
+    contextMenu:
+      enable: true
+      links:
+        - name: 在 ChatGPT 中打开
+          icon: chatgpt
+          url: "https://chatgpt.com/?hints=search&q=I%27m+looking+at+this+documentation%3A+{url}%0AHelp+me+understand+how+to+use+it."
+```
+
+每个链接可以包含：
+- `name` - 链接的显示文本
+- `icon` - 可选的图标名称（参见[图标]({{% relref "docs/guide/shortcodes/icon" %}})）
+- `url` - 包含可选占位符的 URL
 
 ### FlexSearch 索引
 
@@ -406,6 +519,15 @@ outputs:
 - 页面摘要和发布日期
 - 所有内容的直接链接
 
+您可以通过在 front matter 中设置 `llms: false` 来排除特定页面或章节：
+
+```yaml
+---
+title: "内部笔记"
+llms: false
+---
+```
+
 llms.txt 文件根据内容结构自动生成，使 AI 工具和语言模型更容易获取上下文和参考。
 
 ### Open Graph
@@ -420,6 +542,6 @@ llms.txt 文件根据内容结构自动生成，使 AI 工具和语言模型更�
 title: "配置"
 params:
   images:
-    - "/img/config-image.jpg"
+    - "img/config-image.jpg"
   audio: "config-talk.mp3"
 ```
