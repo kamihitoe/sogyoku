@@ -32,8 +32,8 @@ layout: hextra-home
 
 {{< section-preview section="sol" title="题解 / Solution" >}}
 
-{{< section-preview section="life" title="生活记录 / Life" >}}
-
 {{< section-preview section="writing" title="写作 / Writing" >}}
+
+{{< section-preview section="life" title="生活记录 / Life" >}}
 
 {{< section-preview section="misc" title="杂谈 / Misc" >}}

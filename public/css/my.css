@@ -85,6 +85,7 @@ html.dark .my-hero-desc {
 
 /* 1. 外层容器 */
 .sp-wrapper {
+  width: 100%;
   margin-bottom: 3rem; /* 板块之间的间距 */
 }
 

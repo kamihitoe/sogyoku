@@ -1,5 +1,5 @@
 ---
-title: 杂项
+title: 杂谈
 type: blog
 display: normal
 cascade:

@@ -1,7 +1,8 @@
-baseURL: 'https://sogyoku.netlify.app/'
+#baseURL: 'https://sogyoku.netlify.app/'
 languageCode: 'zh-CN'
 title: 'ソギョク 的博客'
 theme: 'hextra'
+
 params:
   navbar:
     displayTitle: true
@@ -22,12 +23,25 @@ params:
     # full (100%), wide (90rem), normal (1280px)
     width: normal
 
-  displayUpdatedDate: true
+  displayUpdatedDate: true # 显示更新日期
   dateFormat: "2006/1/2" # 日期格式
+
 markup:
   goldmark:
     renderer:
-      unsafe: true
+      unsafe: true # 允许HTML
+    extensions:
+      passthrough:
+        delimiters:
+          block: [['\[', '\]'], ["$$", "$$"]]
+          inline: [['\(', '\)'],['$', '$']]
+        enable: true
+  highlight:
+    noClasses: false # 启用代码高亮
+
+module:
+  imports:
+    - path: github.com/imfing/hextra
 
 menu:
   main:
@@ -46,7 +60,7 @@ menu:
     - name: 生活记录
       pageRef: /life
       weight: 5
-    - name: 杂项
+    - name: 杂谈
       pageRef: /misc
       weight: 6
     - name: 关于
@@ -60,4 +74,4 @@ menu:
       weight: 40
       params:
         type: theme-toggle
-        label: true
+        label: false # 不显示文字，只显示图标
