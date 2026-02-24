@@ -40,7 +40,7 @@ jobs:
       - name: Build
         env:
           HUGO_ENVIRONMENT: production
-        run: hugo --gc --minify
+        run: hugo --gc --minify --baseURL "https://kamihitoe.github.io/sogyoku/" --appendPort=false
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
