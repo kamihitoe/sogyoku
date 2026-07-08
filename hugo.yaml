@@ -25,6 +25,10 @@ params:
 
   displayUpdatedDate: true # 显示更新日期
   dateFormat: "2006/1/2" # 日期格式
+  highlight:
+    copy:
+      enable: true
+      display: always # hover | always
 
 markup:
   goldmark:

@@ -1,12 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ソギョク 的博客 – 首页</title>
-    <link>//localhost:1313/</link>
+    <link>/</link>
     <description>Recent content in 首页 on ソギョク 的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+    <lastBuildDate>Tue, 24 Feb 2026 16:40:52 +0800</lastBuildDate>
     
-	  <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +16,10 @@
     
     <item>
       <title>唉</title>
-      <link>//localhost:1313/life/%E5%94%89-2/</link>
+      <link>/life/%E5%94%89-2/</link>
       <pubDate>Tue, 24 Feb 2026 16:40:52 +0800</pubDate>
       
-      <guid>//localhost:1313/life/%E5%94%89-2/</guid>
+      <guid>/life/%E5%94%89-2/</guid>
       <description>
         
         
@@ -29,10 +30,10 @@
     
     <item>
       <title>模意义下最大子段和</title>
-      <link>//localhost:1313/note/%E6%A8%A1%E6%84%8F%E4%B9%89%E4%B8%8B%E6%9C%80%E5%A4%A7%E5%AD%90%E6%AE%B5%E5%92%8C/</link>
+      <link>/note/%E6%A8%A1%E6%84%8F%E4%B9%89%E4%B8%8B%E6%9C%80%E5%A4%A7%E5%AD%90%E6%AE%B5%E5%92%8C/</link>
       <pubDate>Sat, 21 Feb 2026 16:19:27 +0800</pubDate>
       
-      <guid>//localhost:1313/note/%E6%A8%A1%E6%84%8F%E4%B9%89%E4%B8%8B%E6%9C%80%E5%A4%A7%E5%AD%90%E6%AE%B5%E5%92%8C/</guid>
+      <guid>/note/%E6%A8%A1%E6%84%8F%E4%B9%89%E4%B8%8B%E6%9C%80%E5%A4%A7%E5%AD%90%E6%AE%B5%E5%92%8C/</guid>
       <description>
         
         
@@ -113,7 +114,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ans&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8&#34;&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container  hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;复制代码&#34;
@@ -136,10 +137,10 @@
     
     <item>
       <title>痛みは生き続けることの対価だ</title>
-      <link>//localhost:1313/misc/%E7%97%9B%E3%81%BF%E3%81%AF%E7%94%9F%E3%81%8D%E7%B6%9A%E3%81%91%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AE%E5%AF%BE%E4%BE%A1%E3%81%A0/</link>
+      <link>/misc/%E7%97%9B%E3%81%BF%E3%81%AF%E7%94%9F%E3%81%8D%E7%B6%9A%E3%81%91%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AE%E5%AF%BE%E4%BE%A1%E3%81%A0/</link>
       <pubDate>Wed, 11 Feb 2026 21:07:55 +0800</pubDate>
       
-      <guid>//localhost:1313/misc/%E7%97%9B%E3%81%BF%E3%81%AF%E7%94%9F%E3%81%8D%E7%B6%9A%E3%81%91%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AE%E5%AF%BE%E4%BE%A1%E3%81%A0/</guid>
+      <guid>/misc/%E7%97%9B%E3%81%BF%E3%81%AF%E7%94%9F%E3%81%8D%E7%B6%9A%E3%81%91%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AE%E5%AF%BE%E4%BE%A1%E3%81%A0/</guid>
       <description>
         
         
@@ -150,10 +151,10 @@
     
     <item>
       <title>并查集 (DSU)</title>
-      <link>//localhost:1313/note/%E5%B9%B6%E6%9F%A5%E9%9B%86-dsu/</link>
+      <link>/note/%E5%B9%B6%E6%9F%A5%E9%9B%86-dsu/</link>
       <pubDate>Wed, 11 Feb 2026 10:24:34 +0800</pubDate>
       
-      <guid>//localhost:1313/note/%E5%B9%B6%E6%9F%A5%E9%9B%86-dsu/</guid>
+      <guid>/note/%E5%B9%B6%E6%9F%A5%E9%9B%86-dsu/</guid>
       <description>
         
         
@@ -213,7 +214,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8&#34;&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container  hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-8&#34;&gt;
   &lt;button
     class=&#34;hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50&#34;
     title=&#34;复制代码&#34;
@@ -231,10 +232,10 @@
     
     <item>
       <title>唉</title>
-      <link>//localhost:1313/life/%E5%94%89/</link>
+      <link>/life/%E5%94%89/</link>
       <pubDate>Mon, 12 Jan 2026 20:22:29 +0800</pubDate>
       
-      <guid>//localhost:1313/life/%E5%94%89/</guid>
+      <guid>/life/%E5%94%89/</guid>
       <description>
         
         
