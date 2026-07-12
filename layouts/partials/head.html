@@ -100,11 +100,25 @@
   <!-- 阻止移动端菜单打开时自动聚焦搜索框 -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
+      var hamburger = document.querySelector('.hextra-hamburger-menu');
       var sidebar = document.querySelector('.hextra-sidebar-container');
-      if (!sidebar) return;
-      var searchInput = sidebar.querySelector('.hextra-search-input');
-      if (!searchInput) return;
-      searchInput.setAttribute('tabindex', '-1');
+      if (!hamburger || !sidebar) return;
+
+      hamburger.addEventListener('click', function () {
+        // 菜单打开后，将焦点移到侧边栏中第一个非搜索框的链接
+        requestAnimationFrame(function () {
+          var searchInput = sidebar.querySelector('.hextra-search-input');
+          if (searchInput && document.activeElement === searchInput) {
+            var firstLink = sidebar.querySelector('ul a');
+            if (firstLink) {
+              firstLink.focus();
+            } else {
+              searchInput.blur();
+            }
+          }
+        });
+      });
     });
   </script>
+
 </head>

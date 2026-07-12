@@ -242,3 +242,30 @@ pre,
 .highlight pre {
   font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
 }
+
+/* 顶栏选中项样式强化 */
+nav a.hx\:font-medium,
+nav button.hx\:font-medium:not(.hextra-theme-toggle) {
+  color: #111827 !important;
+  font-weight: 600 !important;
+  position: relative;
+}
+/* nav a.hx\:font-medium::after,
+nav button.hx\:font-medium:not(.hextra-theme-toggle)::after {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: 0;
+  height: 2px;
+  background-color: #111827;
+  border-radius: 1px;
+} */
+html.dark nav a.hx\:font-medium,
+html.dark nav button.hx\:font-medium:not(.hextra-theme-toggle) {
+  color: #f9fafb !important;
+}
+/* html.dark nav a.hx\:font-medium::after,
+html.dark nav button.hx\:font-medium:not(.hextra-theme-toggle)::after {
+  background-color: #f9fafb;
+} */
