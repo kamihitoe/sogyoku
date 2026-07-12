@@ -3,6 +3,7 @@ date = '2026-02-11T10:24:34+08:00'
 draft = false
 title = '并查集 (DSU)'
 description = '并查集简介与模板'
+tags = ["算法", "笔记"]
 +++
 
 ## 模板

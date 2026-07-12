@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ソギョク 的博客 – 生活记录</title>
-    <link>/life/</link>
-    <description>Recent content in 生活记录 on ソギョク 的博客</description>
+    <title>ソギョク 的域 – 生活记录</title>
+    <link>//localhost:1313/life/</link>
+    <description>Recent content in 生活记录 on ソギョク 的域</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 24 Feb 2026 16:40:52 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2026 21:12:40 +0800</lastBuildDate>
     
-	  <atom:link href="/life/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="//localhost:1313/life/index.xml" rel="self" type="application/rss+xml" />
     
     
       

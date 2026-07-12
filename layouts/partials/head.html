@@ -96,4 +96,15 @@
 
   {{ partial "utils/page-width-override.html" . }}
   {{ partial "custom/head-end.html" . -}}
+
+  <!-- 阻止移动端菜单打开时自动聚焦搜索框 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var sidebar = document.querySelector('.hextra-sidebar-container');
+      if (!sidebar) return;
+      var searchInput = sidebar.querySelector('.hextra-search-input');
+      if (!searchInput) return;
+      searchInput.setAttribute('tabindex', '-1');
+    });
+  </script>
 </head>

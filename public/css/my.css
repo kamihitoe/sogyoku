@@ -1,3 +1,6 @@
+/* 从 Google Fonts 加载 JetBrains Mono */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 .my-home-container {
   display: flex;
   flex-direction: column;
@@ -229,4 +232,13 @@ html.dark .sp-card-summary {
 }
 .hextra-sidebar-container .hextra-theme-toggle{
   display: none;
+}
+
+/* 代码块字体：JetBrains Mono */
+code,
+pre,
+.hextra-code-block code,
+.hextra-code-block pre,
+.highlight pre {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
 }
