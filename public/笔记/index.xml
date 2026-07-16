@@ -1,0 +1,32 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ソギョク 的域 – 笔记s</title>
+    <link>//localhost:1313/%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 笔记s on ソギョク 的域</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 14 Jul 2026 16:41:15 +0800</lastBuildDate>
+    
+	  <atom:link href="//localhost:1313/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Tricks</title>
+      <link>//localhost:1313/%E7%AC%94%E8%AE%B0/tricks/</link>
+      <pubDate>Tue, 14 Jul 2026 16:41:15 +0800</pubDate>
+      
+      <guid>//localhost:1313/%E7%AC%94%E8%AE%B0/tricks/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

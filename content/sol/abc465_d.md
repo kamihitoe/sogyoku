@@ -3,7 +3,7 @@ date = '2026-07-08T18:23:54+08:00'
 draft = false
 title = 'ABC 465 D - X to Y'
 description = ' '
-tags = ["题解", "AtCoder", "ABC", "思维题"]
+tags = ["AtCoder", "ABC", "思维题"]
 +++
 
 [题目链接](https://atcoder.jp/contests/abc465/tasks/abc465_d)
@@ -17,17 +17,13 @@ tags = ["题解", "AtCoder", "ABC", "思维题"]
 多测，$1\le T\le 2\times 10^5$，$0\le X,Y\le 10^{18}$，$2\le K\le 10^{18}$．
 
 
-
 ### 解析
 
-构造一棵以 $0$ 为根节点的树，对于树上任意正整数节点 $u$ ，其父节点 $\mathrm{fa}(u)=\left \lfloor \dfrac{u}{K} \right \rfloor$．
+构造一棵以 $0$ 为根节点的树，对于树上任意正整数节点 $u$ ，其父节点 $\mathrm{Fa}(u)=\left \lfloor \dfrac{u}{K} \right \rfloor$．
 
-则对 $x$ 进行一次操作相当于将节点 $x$ 移动到其相邻节点 $y$ ，而最少操作次数即为节点 $X$ 和 $Y$ 的最短路径．
-
-树上两点间最短路径一定经过其最近公共祖先，故最少操作次数即 $\mathrm{Dist}(X,\mathrm{LCA})+\mathrm{Dist}(Y,\mathrm{LCA})$．
+则对 $x$ 进行一次操作相当于将节点 $x$ 移动到其相邻节点 $y$ ，最少操作次数即为节点 $X$ 和 $Y$ 的最短路径 $=\mathrm{Dist}(X,\mathrm{LCA})+\mathrm{Dist}(Y,\mathrm{LCA})$．
 
 容易看出对于任意节点 $u>v$ ，$\mathrm{Depth}(u)\ge\mathrm{Depth}(v)$ ，故只需要每次将数值较大的节点上移直至两点相遇（即到达 $\mathrm{LCA}$），移动次数即为最短路径．
-
 
 
 ### 参考代码
@@ -40,4 +36,3 @@ while (x != y) {
     cnt++;
 }
 ```
-
