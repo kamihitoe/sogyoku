@@ -5,6 +5,8 @@ title = '三点最大夹角'
 description = '在点集中选出三个点使其夹角最大'
 +++
 
+[AtCoder - typical90_i](https://atcoder.jp/contests/typical90/tasks/typical90_i)
+
 
 ### 题意简述
 

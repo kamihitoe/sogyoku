@@ -1,11 +1,13 @@
 # 三点最大夹角
 
+[AtCoder - typical90_i](https://atcoder.jp/contests/typical90/tasks/typical90_i)
+
 
 ### 题意简述
 
-在给定的 $N$ 个互异的点中选出三个点 $P_i, P_j, P_k$，使得 $\angle P_i P_j P_k$ 最大。
+在给定的 $N$ 个互异的点中选出三个点 $P_i, P_j, P_k$，使得 $\angle P_i P_j P_k$ 最大．
 
-$3 \leq N \leq 2000$ ，$0^\circ \leq \angle P_i P_j P_k \leq 180^{\circ}$。
+$3 \leq N \leq 2000$ ，$0^\circ \leq \angle P_i P_j P_k \leq 180^{\circ}$．
 
 
 
@@ -13,13 +15,13 @@ $3 \leq N \leq 2000$ ，$0^\circ \leq \angle P_i P_j P_k \leq 180^{\circ}$。
 
 #### 朴素解法
 
-枚举所有三点组合 $(P_i, P_j, P_k)$ ，时间复杂度 $O(N^3)$ 。
+枚举所有三点组合 $(P_i, P_j, P_k)$ ，时间复杂度 $O(N^3)$ ．
 
 #### 优化思路
 
-枚举顶点 $P_j$ ，计算其余的点相对于 $P_j$ 的极角，寻找极角之差最接近且不大于 $180^\circ$ 的点对 $(P_i,P_k)$。
+枚举顶点 $P_j$ ，计算其余的点相对于 $P_j$ 的极角，寻找极角之差最接近且不大于 $180^\circ$ 的点对 $(P_i,P_k)$．
 
-具体步骤：外层循环枚举 `j` ，内层循环通过 `atan2(dy, dx)` 计算极角并排序，用双指针寻找 $\le180^\circ$ 的最大差值，时间复杂度 $O(N^2 \log N)$。
+具体步骤：外层循环枚举 `j` ，内层循环通过 `atan2(dy, dx)` 计算极角并排序，用双指针寻找 $\le180^\circ$ 的最大差值，时间复杂度 $O(N^2 \log N)$．
 
 细节上，处理跨越 $-\pi$ / $\pi$ 边界的夹角时，可以通过
 
