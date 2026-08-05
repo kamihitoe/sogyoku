@@ -3,6 +3,7 @@ date = '2026-07-14T16:41:39+08:00'
 draft = false
 title = 'Tricks'
 description = '一些技巧'
+tags = ["结论"]
 +++
 
 

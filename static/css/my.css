@@ -160,6 +160,8 @@ html.dark .sp-header {
   text-decoration: none; /* 去掉链接下划线 */
   transition: all 0.3s ease; /* 平滑过渡动画 */
   height: 100%; /* 保证同一行卡片高度一致 */
+  min-width: 0; /* 允许卡片在网格中收缩 */
+  overflow: hidden; /* 隐藏溢出内容 */
   box-sizing: border-box;
 }
 
@@ -233,6 +235,7 @@ html.dark .sp-card-summary {
 .hextra-sidebar-container .hextra-theme-toggle{
   display: none;
 }
+
 
 /* 代码块字体：JetBrains Mono */
 code,

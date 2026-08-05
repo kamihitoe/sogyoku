@@ -42,7 +42,7 @@
   <meta itemprop="description" content="给定若干个任务及其所需执行次数，每次可以选至多k个不同任务执行一次，求完成所有任务的最少次数">
   <meta itemprop="datePublished" content="2026-07-29T18:52:36+08:00">
   <meta itemprop="dateModified" content="2026-07-29T18:52:36+08:00">
-  <meta itemprop="wordCount" content="84">
+  <meta itemprop="wordCount" content="80">
   <meta itemprop="keywords" content="结论,思维题">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="一个典题的结论">
@@ -711,12 +711,10 @@ T = \max\left(\max_{1 \le i \le N} A_i,\ \left\lceil \frac{\sum_{i=1}^{N} A_i}{k
     <a href="#%e5%8f%af%e8%a1%8c%e6%80%a7" class="subheading-anchor" aria-label="此章节的永久链接"></a></h4><p>构造 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 条长度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span> 的数轴（第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 条轴到第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 条轴首尾相接，总长 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">kT</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span>）．</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><pre><code>轴1: ────────────────────
-轴2: ────────────────────
+<div><pre><code>轴1: ─────────────────
+轴2: ─────────────────
 ...
-轴k: ────────────────────
-    ↑                 ↑
-    0                 T</code></pre></div><div class="hextra-code-copy-btn-container  hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+轴k: ─────────────────</code></pre></div><div class="hextra-code-copy-btn-container  hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="复制代码"
