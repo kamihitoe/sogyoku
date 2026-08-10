@@ -1,5 +1,4 @@
 # ABC 465 D - X to Y
-
 [题目链接](https://atcoder.jp/contests/abc465/tasks/abc465_d)
 
 ### 题意简述

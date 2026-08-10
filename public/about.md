@@ -1,5 +1,4 @@
 # 关于
-
 <span style="font-size: 20px;">名前　ソギョク</span>
 
 <span style="font-size: 20px;">連絡先</span>

@@ -1,5 +1,4 @@
 # 三点最大夹角
-
 [AtCoder - typical90_i](https://atcoder.jp/contests/typical90/tasks/typical90_i)
 
 
