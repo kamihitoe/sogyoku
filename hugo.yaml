@@ -3,6 +3,11 @@ languageCode: 'zh-CN'
 title: 'ソギョク 的域'
 theme: 'hextra'
 
+# KaTeX 字体等原始文件直接从 assets 发布，使 katex.min.css 中的 url(fonts/...) 保持有效
+staticDir:
+  - static
+  - assets/katex
+
 params:
   navbar:
     displayTitle: true
@@ -27,6 +32,7 @@ params:
   
   imageZoom:
     enable: true # 开启图片缩放
+    js: "medium-zoom.min.js" # 本地资源，避免构建时联网
 
   displayUpdatedDate: false # 是否显示更新日期
   dateFormat: "2006/1/2" # 日期格式
@@ -44,7 +50,15 @@ params:
   math:
     engine: katex
     katex:
-      base: "https://cdn.jsdelivr.net/npm/katex@0.16.22/dist"
+      # 本地资源（KaTeX 0.16.22）。base 为纯路径（不以 http 开头）：
+      #   - css 存在 -> 由 resources.Get 读取 assets 中的 css，不改写字体 url；
+      #     字体相对路径 fonts/ 由 hugo.yaml 的 staticDir (assets/katex) 原样发布
+      #   - js / contrib 通过下方 assets 列表发布，渲染由 Hextra 的 transform.ToMath 完成
+      base: "katex"
+      css: "katex/katex.min.css"
+      assets:
+        - "katex/katex.min.js"
+        - "katex/contrib/auto-render.min.js"
 
 # 输出格式
 outputs:

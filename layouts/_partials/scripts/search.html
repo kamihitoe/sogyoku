@@ -1,0 +1,38 @@
+{{/* Search */}}
+{{/* LOCAL PATCH (本项目改动，勿随主题更新丢失):
+     文件来源 themes/hextra v0.12.0。原版始终从 jsDelivr 拉 FlexSearch，离线/网络抖动时构建直接失败。
+     此处改为优先读取 assets/flexsearch.bundle{,.min}.js，缺失才回退 CDN。 */}}
+{{- if (site.Params.search.enable | default true) -}}
+  {{- $searchType := site.Params.search.type | default "flexsearch" -}}
+  {{- if eq $searchType "flexsearch" -}}
+    {{- $jsSearchScript := printf "%s.search.js" .Language.Lang -}}
+    {{- $jsSearch := resources.Get "js/flexsearch.js" | resources.ExecuteAsTemplate $jsSearchScript . -}}
+    {{- if hugo.IsProduction -}}
+      {{- $jsSearch = $jsSearch | minify | fingerprint -}}
+    {{- end -}}
+    {{- $flexSearchVersion := site.Params.search.flexsearch.version | default "0.8.143" -}}
+    {{- /* 优先使用 assets 中的本地 FlexSearch，缺失时回退 CDN */ -}}
+    {{- $flexSearchLocal := printf "flexsearch.bundle%s.js" (cond hugo.IsProduction ".min" ".debug") -}}
+    {{- with resources.Get $flexSearchLocal -}}
+      {{ with resources.Copy "js/flexsearch.js" . -}}
+        {{ $flexSearchJs := . | fingerprint -}}
+        <script defer src="{{ $flexSearchJs.RelPermalink }}" integrity="{{ $flexSearchJs.Data.Integrity }}" crossorigin="anonymous"></script>
+      {{ end -}}
+    {{- else -}}
+    {{- $flexSearchJsUrl := printf "https://cdn.jsdelivr.net/npm/flexsearch@%s/dist/flexsearch.bundle%s.js" $flexSearchVersion (cond hugo.IsProduction ".min" ".debug") -}}
+    {{ with try (resources.GetRemote $flexSearchJsUrl) -}}
+      {{ with .Err -}}
+        {{ errorf "Could not retrieve FlexSearch js file from %s. Reason: %s." $flexSearchJsUrl . -}}
+      {{ else with.Value -}}
+        {{ with resources.Copy (printf "js/flexsearch.js") . -}}
+          {{ $flexSearchJs := . | fingerprint -}}
+          <script defer src="{{ $flexSearchJs.RelPermalink }}" integrity="{{ $flexSearchJs.Data.Integrity }}" crossorigin="anonymous"></script>
+        {{ end -}}
+      {{ end -}}
+    {{ end -}}
+    {{- end -}}
+    <script defer src="{{ $jsSearch.RelPermalink }}" integrity="{{ $jsSearch.Data.Integrity }}"></script>
+  {{- else -}}
+    {{- warnf `search type "%s" is not supported` $searchType -}}
+  {{- end -}}
+{{- end -}}

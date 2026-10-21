@@ -88,7 +88,7 @@ Hextra 仓库原文件是 LF（`\n`）换行，`*/` 换行后接 `-}}` 是合法
 
 ### 解决方法
 
-#### 方法 1：单独修改主题
+#### 1. 单独修改主题
 
 ```bash
 git -C themes/hextra config core.autocrlf input
@@ -97,7 +97,7 @@ git -C themes/hextra checkout -- .
 git -C themes/hextra reset --hard
 ```
 
-#### 方法 2：全局修改
+#### 2. 全局修改
 
 ```bash
 git config --global core.autocrlf input

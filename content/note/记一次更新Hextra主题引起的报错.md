@@ -2,7 +2,7 @@
 date = '2026-08-09T19:45:40+08:00'
 draft = false
 title = '记一次更新 Hextra 主题引起的报错'
-description = 'CRLF 导致的 comment ends before closing delimiter'
+description = 'CRLF 导致的 Go 模板解析出错'
 +++
 
 Hextra `v0.12.0` -> `v0.12.3` 后报错：
@@ -94,7 +94,7 @@ Hextra 仓库原文件是 LF（`\n`）换行，`*/` 换行后接 `-}}` 是合法
 
 ### 解决方法
 
-#### 方法 1：单独修改主题
+#### 1. 单独修改主题
 
 ```bash
 git -C themes/hextra config core.autocrlf input
@@ -103,7 +103,7 @@ git -C themes/hextra checkout -- .
 git -C themes/hextra reset --hard
 ```
 
-#### 方法 2：全局修改
+#### 2. 全局修改
 
 ```bash
 git config --global core.autocrlf input

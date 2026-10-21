@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ソギョク 的域 – 模板</title>
-    <link>//localhost:1313/tags/%E6%A8%A1%E6%9D%BF/</link>
+    <link>//localhost:65022/tags/%E6%A8%A1%E6%9D%BF/</link>
     <description>Recent content in 模板 on ソギョク 的域</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 11 Feb 2026 10:24:34 +0800</lastBuildDate>
     
-	  <atom:link href="//localhost:1313/tags/%E6%A8%A1%E6%9D%BF/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="//localhost:65022/tags/%E6%A8%A1%E6%9D%BF/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -17,10 +17,10 @@
     
     <item>
       <title>并查集 (DSU)</title>
-      <link>//localhost:1313/note/%E5%B9%B6%E6%9F%A5%E9%9B%86/</link>
+      <link>//localhost:65022/note/%E5%B9%B6%E6%9F%A5%E9%9B%86/</link>
       <pubDate>Wed, 11 Feb 2026 10:24:34 +0800</pubDate>
       
-      <guid>//localhost:1313/note/%E5%B9%B6%E6%9F%A5%E9%9B%86/</guid>
+      <guid>//localhost:65022/note/%E5%B9%B6%E6%9F%A5%E9%9B%86/</guid>
       <description>
         
         
